@@ -1,176 +1,71 @@
-
-import { Text, View, Image, StyleSheet } from "react-native";
-import { Alert, Pressable, StyleSheet, Text, View } from "react-native";
-
+import { StyleSheet, Text, View } from "react-native";
 
 export default function Index() {
   return (
     <View style={styles.container}>
-
-      <View style={styles.topbar}>
-        <Text style={styles.arrow}>{"<"}</Text>
-        <Text style={styles.header}>Posts</Text>
+      {/* Header row*/}
+      <View style={styles.header}>
+        <View style={StyleSheet.headerCentre}>
+          <Text style={styles.headerTitle}>Profile Name</Text>
+          <Text style={styles.headerSubtitle}>Posts</Text>
+        </View>
+        <View style={styles.headerbackarrow}> add a back arrow header</View>
       </View>
 
-      <View style={styles.userRow}>
-        {/* put the user profile picture name and menu three dota here */}
+      {/** Posts header */}
+      <View style={styles.postHeader}>
+        <View style={styles.postHeaderProfilePic}></View>
+        <View style={styles.postUsername}>
+          <Text style={styles.postUsernameText}>USername</Text>
+        </View>
+        <View>
+          <Text styles={styles.rightIcon}>...</Text>
+        </View>
       </View>
 
-      <Image
-        // Absolute Url: "https://www.istockphoto.com/photo/scenic-aerial-view-of-the-mountain-landscape-with-a-forest-and-the-crystal-blue-gm1458782106-493292590"
-        source={require("../assets/images/a.jpg")}
-        style={styles.image} />
+      {/*Post image */}
 
-      {/* put like share and comment icons here */}
+      <View style={styles.postImage}></View>
 
-      <View style={styles.TextSection}>
-        <Text style={styles.likes}>Liked by
-          <Text style={styles.bold}> paisley.print.48</Text> and
-          <Text style={styles.bold}> 7 others</Text>
-        </Text>
+      {/*post actions */}
 
-        <Text style={styles.caption}>
-          <Text style={styles.bold}>frenchie_fry39 </Text>
-          Fresh shot on a sunny day</Text>
-
-        <Text style={styles.viewComments}>View all 12 comments</Text>
-        <Text style={styles.comment}>
-          <Text style={styles.bold2}>lil_wyatt838</Text> Awesome tones</Text>
-        <Text style={styles.comment}><Text style={styles.bold2}>pia.in.a.pod</Text> Love it!</Text>
-
-        <Text style={styles.time}>1 day ago</Text>
-      </View>
-=======
-      <View style={styles.content}>
-        <Text>Edit app/index.tsx to edit this screen.</Text>
+      <View style={styles.actions}>
+        <View style={styles.actionsLeft}>
+          <Text style={styles.actionIcon}> Like icon</Text>
+          <Text style={styles.actionIcon}> comments icon </Text>
+          <Text style={styles.actionIcon}> share icon </Text>
+        </View>
+        <View style={styles.actionsRight}>
+          <Text style={styles.actionIcon}> save icon </Text>
+        </View>
       </View>
 
-      <Pressable
-        style={styles.alertButton}
-        onPress={() => Alert.alert("Alert Button pressed")}
-      >
-        <Text style={styles.alertButtonText}>Alert</Text>
-      </Pressable>
+      {/*likes section */}
 
+      <View style={styles.likesSection}>
+        <View style={styles.likesSectionText}>
+          <Text>Liked by blah and blah</Text>
+        </View>
+      </View>
+
+      {/*caption */}
+      <View style={styles.postCaption}>
+        <Text> Post caption</Text>
+      </View>
+
+      {/* Bottom Navigation */}
+      <View style={styles.bottomNav}>
+        <Text style={styles.navIcon}>home icon</Text>
+        <Text style={styles.navIcon}>search</Text>
+        <Text style={styles.navIcon}>add posts</Text>
+        <Text style={styles.navIcon}>shopping cart icon idk</Text>
+        <Text style={styles.navIcon}>profile icon</Text>
+      </View>
+
+      {/* Alert Button */}
+      <View style={styles.alertContainer}>
+        <Button title="Alert" onPress={() => alert("Alert Button pressed")} />
+      </View>
     </View>
-
-    // please add the alert button here at the end
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-
-    paddingTop: 40, // iOS-like top spacing
-  },
-
-  topbar: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "center",
-    paddingHorizontal: 12,
-    paddingVertical: 10,
-    borderBottomWidth: 1,
-    borderColor: "#e6e6e6",
-    marginBottom: 10,
-  },
-
-  arrow: {
-    position: "absolute",
-    left: 12,
-    fontSize: 22,
-    color: "#000",
-  },
-
-  header: {
-    fontSize: 16,
-    fontWeight: "600",
-    color: "#000",
-  },
-
-  userRow: {
-    paddingHorizontal: 12,
-    paddingBottom: 8,
-  },
-
-  image: {
-    width: "100%",
-    height: 380,
-    resizeMode: "cover",
-    backgroundColor: "#eee",
-    borderRadius: 0,
-    marginBottom: 10,
-  },
-
-  TextSection: {
-    paddingHorizontal: 12,
-  },
-
-  likes: {
-    fontSize: 13,
-    fontWeight: "600",
-    color: "#000",
-    marginBottom: 6,
-  },
-
-  caption: {
-    fontSize: 13,
-    color: "#000",
-    marginBottom: 6,
-    lineHeight: 18,
-  },
-
-  viewComments: {
-    fontSize: 13,
-    color: "#777",
-    marginBottom: 6,
-  },
-
-  comment: {
-    fontSize: 13,
-    color: "#000",
-    marginBottom: 4,
-    lineHeight: 18,
-  },
-
-  bold: {
-    fontWeight: "600",
-    fontSize: 13,
-    color: "#000",
-  },
-
-  bold2: {
-    fontWeight: "600",
-    fontSize: 13,
-    color: "#000",
-  },
-
-  time: {
-    fontSize: 11,
-    color: "#999",
-    marginTop: 4,
-  },
-});
-=======
-  },
-  content: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  alertButton: {
-    margin: 16,
-    paddingVertical: 14,
-    borderRadius: 12,
-    backgroundColor: "black",
-    alignItems: "center",
-  },
-  alertButtonText: {
-    color: "white",
-    fontSize: 16,
-    fontWeight: "600",
-  },
-});
->>>>>>> willard-alert
