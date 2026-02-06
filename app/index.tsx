@@ -1,8 +1,12 @@
+
 import { Text, View, Image, StyleSheet } from "react-native";
+import { Alert, Pressable, StyleSheet, Text, View } from "react-native";
+
 
 export default function Index() {
   return (
     <View style={styles.container}>
+
       <View style={styles.topbar}>
         <Text style={styles.arrow}>{"<"}</Text>
         <Text style={styles.header}>Posts</Text>
@@ -36,6 +40,18 @@ export default function Index() {
 
         <Text style={styles.time}>1 day ago</Text>
       </View>
+=======
+      <View style={styles.content}>
+        <Text>Edit app/index.tsx to edit this screen.</Text>
+      </View>
+
+      <Pressable
+        style={styles.alertButton}
+        onPress={() => Alert.alert("Alert Button pressed")}
+      >
+        <Text style={styles.alertButtonText}>Alert</Text>
+      </Pressable>
+
     </View>
 
     // please add the alert button here at the end
@@ -46,6 +62,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#fff",
+
     paddingTop: 40, // iOS-like top spacing
   },
 
@@ -136,3 +153,24 @@ const styles = StyleSheet.create({
     marginTop: 4,
   },
 });
+=======
+  },
+  content: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  alertButton: {
+    margin: 16,
+    paddingVertical: 14,
+    borderRadius: 12,
+    backgroundColor: "black",
+    alignItems: "center",
+  },
+  alertButtonText: {
+    color: "white",
+    fontSize: 16,
+    fontWeight: "600",
+  },
+});
+>>>>>>> willard-alert
