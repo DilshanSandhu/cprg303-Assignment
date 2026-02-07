@@ -31,12 +31,12 @@ export default function Index() {
 
       <View style={styles.actions}>
         <View style={styles.actionsLeft}>
-          <Text style={styles.actionIcon}> Like icon</Text>
-          <Text style={styles.actionIcon}> comments icon </Text>
-          <Text style={styles.actionIcon}> share icon </Text>
+          <Text style={styles.actionIcon}> ❤️</Text>
+          <Text style={styles.actionIcon}> 💬 </Text>
+          <Text style={styles.actionIcon}> ✈️ </Text>
         </View>
         <View style={styles.actionsRight}>
-          <Text style={styles.actionIcon}> save icon </Text>
+          <Text style={styles.actionIcon}> 🔖 </Text>
         </View>
       </View>
 
@@ -55,11 +55,11 @@ export default function Index() {
 
       {/* Bottom Navigation */}
       <View style={styles.bottomNav}>
-        <Text style={styles.navIcon}>home icon</Text>
-        <Text style={styles.navIcon}>search</Text>
-        <Text style={styles.navIcon}>add posts</Text>
-        <Text style={styles.navIcon}>shopping cart icon idk</Text>
-        <Text style={styles.navIcon}>profile icon</Text>
+        <Text style={styles.navIcon}>🏠</Text>
+        <Text style={styles.navIcon}>🔍</Text>
+        <Text style={styles.navIcon}>➕</Text>
+        <Text style={styles.navIcon}>👜</Text>
+        <Text style={styles.navIcon}>👤</Text>
       </View>
 
       {/* Alert Button */}
